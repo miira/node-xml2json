@@ -33,7 +33,7 @@ parser.toJson(xml, options);
 parser.toXml(json, options);
 ```
 
-### Options object
+### Options object for `toJson`
 
 Default values:
 ```javascript
@@ -67,7 +67,16 @@ var chars =  {
 };
 ```
 
+### Options object for `toXml`
 
+Default values:
+```javascript
+var options = {
+    sanitize: false
+};
+```
+
+`sanitize: false` is the default option to behave like previous versions
 
 
 (*) xml2json tranforms CDATA content to JSON, but it doesn't generate a reversible structure.
